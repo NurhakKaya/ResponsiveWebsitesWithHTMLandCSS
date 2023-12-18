@@ -79,9 +79,11 @@ aside {
   border-bottom: 5px solid #1098ad;
 }
 
+/*
 body {
-  /* background-color: blue; */
+   background-color: blue; 
 }
+*/
 
 /* .first-li {
   font-weight: bold;
@@ -103,10 +105,39 @@ li:nth-child(odd) {
   color: orange;
 }
 
+/*
 li:nth-child(even) {
-  /* color: black; */
+   color: black; 
 }
+*/
 
-article p:last-child {
+/* Misconception: this won't work! */
+
+article p:first-child {
   color: red;
 }
+
+/* Styling links */
+/* These four states are always defined in this exact order; link, visited, hover and active*/
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color: #777; */
+
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+/*LVHA*/
