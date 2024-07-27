@@ -4,6 +4,7 @@ h3,
 h4,
 p,
 li {
+  /* Element selector using html elements. */
   font-family: sans-serif;
   color: #444;
 }
@@ -44,23 +45,30 @@ li {
 }
 
 /* footer p {
+ Descendant selector: This will select all the p elements inside the footer element and apply the following CSS changes.
   font-size: 16px;
 } */
 
 /* article header p {
+  Nested Descendant selector: Apply the following styling to all p elements withing article header element.
   font-style: italic;
 } */
 
 #author {
+  /* id selector */
+  /* We can use the id only once */
+  /* In real world, we never use ids, instead we use classes. By using classes, we are prepared for the future. */
   font-style: italic;
   font-size: 18px;
 }
 
 #copyright {
+  /* copyright selector */
   font-size: 16px;
 }
 
 .related {
+  /* Class attribute can be used by multiple elements */
   list-style: none;
 }
 
@@ -70,6 +78,9 @@ li {
 }
 
 .main-header {
+  /* Using hexadecimal notation/numbers */
+  /* In practice, we mostly use hexadecimal colours, and rgba when we need transparency. */
+  /* When colours in all three channels are the same, we get a grey colour, i.e., rgb(0,0,0), rgb(69,69,69), #b7b7b7, #f7f7f7, #444. */
   background-color: #f7f7f7;
 }
 
@@ -90,18 +101,22 @@ body {
 } */
 
 li:first-child {
+  /* Pseudo class - all first children of all li elements */
   font-weight: bold;
 }
 
 li:last-child {
+  /* Pseudo class to select the last child of li element */
   font-style: italic;
 }
 
 li:nth-child(2) {
+  /* Pseudo class to select second child of li element */
   color: red;
 }
 
 li:nth-child(odd) {
+  /* Pseudo class to select odd children (first, third, fifth, seventh etc. children) of li element */
   color: orange;
 }
 
@@ -112,21 +127,34 @@ li:nth-child(even) {
 */
 
 /* Misconception: this won't work! */
-
+/* The misconception is that this elector here should have selected the first p element inside of the article,
+However, this is not how pseudo class actually works. Instead, what CSS will do is to select a p element that is actually
+the first cild of the article. If the p element is not the first child, then this styling won't work. */
 article p:first-child {
   color: red;
 }
 
-/* Styling links */
-/* These four states are always defined in this exact order; link, visited, hover and active*/
+/* For our example, this pseudo class will work as the last child of article is actually a p element. */
+article p:last-child
+{
+  color: red;
+}
+
+/* Styling links using pseudo classes*/
+/* These four states are always defined in this exact order; 
+  link, 
+  visited, 
+  hover and 
+  active*/
 a:link {
+  /* This pseudo class will target all of anchor elements that have a href attribute. */
   color: #1098ad;
   text-decoration: none;
 }
 
 a:visited {
   /* color: #777; */
-
+  /* We don't normally change the styles/colours of visited links. They are generally same as the other un-visited links. */
   color: #1098ad;
 }
 
@@ -134,9 +162,13 @@ a:hover {
   color: orangered;
   font-weight: bold;
   text-decoration: underline orangered;
+  /* Some other options */
+  /* text-decoration: underline dotted orangered;
+  text-decoration: underline wavy orangered; */
 }
 
 a:active {
+  /* How the anchor element will look like during the duration of a click. */
   background-color: black;
   font-style: italic;
 }
