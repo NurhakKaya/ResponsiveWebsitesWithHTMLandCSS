@@ -1,6 +1,6 @@
 In order to create a brand new HTML page with head and body, write ! and hit tab button - this will create a basic HTML structure. 
 
-High-level structure of an HTML page inside <body>:
+High-level structure of a Semantic (certain elements have a meaning or a purpose attached to them) HTML page inside <body>:
 <header>
 	<h1></h1>
 	<nav>
@@ -13,11 +13,14 @@ High-level structure of an HTML page inside <body>:
 	<header>
 		<h2></h2>
 		<img/>
+		<p>Some text <strong>Author's name</strong> some more text</p>
 	</header>
 </article>
 <footer>
 	Copyright &copy; (this is called HTML entity)
 </footer>
+
+
 
 VS Code Extensions and Settings
 - Prettier - Code formatter
