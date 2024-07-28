@@ -33,10 +33,15 @@ VS Code Extensions and Settings
 	* Search for "tab size", and set Tab Size to 2. 
 - One Monokai Theme
 	After installing this extension, hit "Set Colour Theme" button on the extension screen. You can find other colour themes under Settings>Themes>Color Theme.
-	
+
 	Finally, Go to Settings>Themes>File Icon Theme and set it to Seti (Visual Studio Code).
 - Go to Settings, search for "auto closing tags", make sure all Auto Closing Tags checkboxes are checked. 
-	
+
+- Install Image preview extension.	
+- Install Color Highlight extension. 
+- Install Auto Rename Tag extension.
+- Install Live Server extension.
+	After installing Live Server, we see a Go Live option at the bottom of VS Code - after clicking on this button, it will run the app on a new browser, and we don't need to refresh the page again to see our changes. 
 	
 Conflict Between Selectors
 	All rules apply but CSS applies rules to resolve conflicts. These rules are only for resolving conflicting properties, such as if the font-size is set in multiple selectors. 
