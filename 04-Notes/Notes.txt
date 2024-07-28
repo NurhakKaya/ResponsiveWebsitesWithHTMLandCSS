@@ -1,0 +1,12 @@
+VS Code Extensions to install
+- Prettier - Code formatter
+	After installing this extension, go to Settings and do the following;	
+	* Search for "default format", then choose Prettier as the Default Formatter. 
+	* Search for "format on save", and check the Format On Save checkbox. 
+	* Search for "auto save", and set Auto Save to onFocusChange. 
+	* Search for "tab size", and set Tab Size to 2. 
+- One Monokai Theme
+	After installing this extension, hit "Set Colour Theme" button on the extension screen. You can find other colour themes under Settings>Themes>Color Theme.
+	
+	Finally, Go to Settings>Themes>File Icon Theme and set it to Seti (Visual Studio Code).
+	
