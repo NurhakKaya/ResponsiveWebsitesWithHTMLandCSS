@@ -1,0 +1,1 @@
+Notes for "Build Responsive Real-World Websites with HTML and CSS" course by Jonas Schmedtmann: https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/?couponCode=MCLARENT71824
