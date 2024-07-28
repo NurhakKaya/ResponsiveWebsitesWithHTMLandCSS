@@ -135,8 +135,7 @@ article p:first-child {
 }
 
 /* For our example, this pseudo class will work as the last child of article is actually a p element. */
-article p:last-child
-{
+article p:last-child {
   color: red;
 }
 
@@ -173,3 +172,20 @@ a:active {
   font-style: italic;
 }
 /*LVHA*/
+
+/* Resolving conflicts */
+#copyright {
+  color: black;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;
+}

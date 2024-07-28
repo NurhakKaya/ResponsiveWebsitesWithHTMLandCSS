@@ -1,4 +1,25 @@
-VS Code Extensions to install
+In order to create a brand new HTML page with head and body, write ! and hit tab button - this will create a basic HTML structure. 
+
+High-level structure of an HTML page inside <body>:
+<header>
+	<h1></h1>
+	<nav>
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+	</nav>
+<header>
+<article>
+	<header>
+		<h2></h2>
+		<img/>
+	</header>
+</article>
+<footer>
+	Copyright &copy; (this is called HTML entity)
+</footer>
+
+VS Code Extensions and Settings
 - Prettier - Code formatter
 	After installing this extension, go to Settings and do the following;	
 	* Search for "default format", then choose Prettier as the Default Formatter. 
@@ -9,4 +30,21 @@ VS Code Extensions to install
 	After installing this extension, hit "Set Colour Theme" button on the extension screen. You can find other colour themes under Settings>Themes>Color Theme.
 	
 	Finally, Go to Settings>Themes>File Icon Theme and set it to Seti (Visual Studio Code).
+- Go to Settings, search for "auto closing tags", make sure all Auto Closing Tags checkboxes are checked. 
+	
+	
+Conflict Between Selectors
+	All rules apply but CSS applies rules to resolve conflicts. These rules are only for resolving conflicting properties, such as if the font-size is set in multiple selectors. 
+	- ID (#) selector has the highest priority. 
+		If there is an ID selector, then that is the rule that is going to be applied.
+		If there are multiple ID selectors, then it is the last of those selectors that gets applied.
+	- Class (.) or pseudo-class (:) selector has the second highest priority. 
+		If there are multiple, then it is the last one of those that is going to be applied. 
+	- Element selector (p, div, li, etc.) has the thired highest priority.
+		If there are multiple, then it is the last one of those that is going to be applied. 
+	- Universal selector (*) has the lowest priority of all. 
+	- Inline style (style attribute in HTML) has the highest priority but we should never use inline style.
+	- Declaration marked !important
+		Decleration marked with the important keywords is basically just a hack that we can use as teh last resort to resolve conflicts in our CSS and it also has highest priority, but again, it should only be used as a last resort.
+		Whenever we mark a declaration with important, it is the one that will be applied.
 	
