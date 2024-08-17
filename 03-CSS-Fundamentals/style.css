@@ -1,3 +1,9 @@
+*{
+  /* Universal selector - things like you can not put in body, like border-top, can be put here
+  and universal selector applies to all elements and there is no inheritance involved like the body element inheritance. */
+  border-top:10px solid #1098ad; /*All elements now have this border-top*/
+}
+
 body {
   /* Inheritance: All other elements inherit the values that are written here which can be overridden in child element properties if wanted */
   /* Not all properties get inherited. It's mostly the ones that are related to text, e.g.,
@@ -5,6 +11,7 @@ body {
   text-align, text-transform, text-shadow, list-style, etc.*/
   color: #444;
   font-family: sans-serif;
+  border-top: 10px solid red;
 }
 
 h1,
