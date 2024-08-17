@@ -189,3 +189,9 @@ a:active {
 footer p {
   color: green;
 }
+
+/*This is an element selector and as there are a pseudo classes for the a element that set the color, 
+this element selector's color setting will simply be ignored and won't be applied.*/
+a {
+  color: red;
+}
