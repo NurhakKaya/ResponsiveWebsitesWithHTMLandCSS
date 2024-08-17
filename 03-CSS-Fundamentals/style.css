@@ -187,11 +187,11 @@ a:active {
 }
 
 footer p {
-  color: green;
+  color: green !important; /*!imortant keyword will set the colour to green, but we should avoid using this keyword as it is a hack.*/
 }
 
 /*This is an element selector and as there are a pseudo classes for the a element that set the color, 
 this element selector's color setting will simply be ignored and won't be applied.*/
-a {
+/* a {
   color: red;
-}
+} */
