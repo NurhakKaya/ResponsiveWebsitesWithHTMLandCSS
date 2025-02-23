@@ -1,0 +1,215 @@
+*{
+  /* Universal selector - things like you can not put in body, like border-top, can be put here
+  and universal selector applies to all elements and there is no inheritance involved like the body element inheritance. */
+  border-top:10px solid #1098ad; /*All elements now have this border-top*/
+}
+
+body {
+  /* Inheritance: All other elements inherit the values that are written here which can be overridden in child element properties if wanted */
+  /* Not all properties get inherited. It's mostly the ones that are related to text, e.g.,
+  font-family, font-size, font-weight, font-style, color, line-height, letter-spacing,
+  text-align, text-transform, text-shadow, list-style, etc.*/
+  color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid red;
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  /* color:#1098ad; if this is enabled, then this will override the inherited color style from the body element*/
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+li {
+  font-size: 20px;
+}
+
+/* footer p {
+ Descendant selector: This will select all the p elements inside the footer element and apply the following CSS changes.
+  font-size: 16px;
+} */
+
+/* article header p {
+  Nested Descendant selector: Apply the following styling to all p elements withing article header element.
+  font-style: italic;
+} */
+
+#author {
+  /* id selector */
+  /* We can use the id only once */
+  /* In real world, we never use ids, instead we use classes. By using classes, we are prepared for the future. */
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  /* copyright selector */
+  font-size: 16px;
+}
+
+.related {
+  /* Class attribute can be used by multiple elements */
+  list-style: none;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.main-header {
+  /* Using hexadecimal notation/numbers */
+  /* In practice, we mostly use hexadecimal colours, and rgba when we need transparency. */
+  /* When colours in all three channels are the same, we get a grey colour, i.e., rgb(0,0,0), rgb(69,69,69), #b7b7b7, #f7f7f7, #444. */
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+/*
+body {
+   background-color: blue; 
+}
+*/
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  /* Pseudo class - all first children of all li elements */
+  font-weight: bold;
+}
+
+li:last-child {
+  /* Pseudo class to select the last child of li element */
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  /* Pseudo class to select second child of li element */
+  color: red;
+}
+
+li:nth-child(odd) {
+  /* Pseudo class to select odd children (first, third, fifth, seventh etc. children) of li element */
+  color: orange;
+}
+
+/*
+li:nth-child(even) {
+   color: black; 
+}
+*/
+
+/* Misconception: this won't work! */
+/* The misconception is that this elector here should have selected the first p element inside of the article,
+However, this is not how pseudo class actually works. Instead, what CSS will do is to select a p element that is actually
+the first cild of the article. If the p element is not the first child, then this styling won't work. */
+article p:first-child {
+  color: red;
+}
+
+/* For our example, this pseudo class will work as the last child of article is actually a p element. */
+article p:last-child {
+  color: red;
+}
+
+/* Styling links using pseudo classes*/
+/* These four states are always defined in this exact order; 
+  link, 
+  visited, 
+  hover and 
+  active*/
+a:link {
+  /* This pseudo class will target all of anchor elements that have a href attribute. */
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color: #777; */
+  /* We don't normally change the styles/colours of visited links. They are generally same as the other un-visited links. */
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+  /* Some other options */
+  /* text-decoration: underline dotted orangered;
+  text-decoration: underline wavy orangered; */
+}
+
+a:active {
+  /* How the anchor element will look like during the duration of a click. */
+  background-color: black;
+  font-style: italic;
+}
+
+nav {
+  /* All elements (strong and a elements for this example) inside nav element will have the following font-size */
+  font-size: 18px;
+}
+
+/*LVHA*/
+
+/* Resolving conflicts */
+/* #copyright {
+  color: black;
+} */
+
+/* .copyright {
+  color: blue;
+} */
+
+/* .text {
+  color: yellow;
+} */
+
+/* footer p {
+  color: green !important; /*!imortant keyword will set the colour to green, but we should avoid using this keyword as it is a hack.*/
+} */
+
+/*This is an element selector and as there are a pseudo classes for the a element that set the color, 
+this element selector's color setting will simply be ignored and won't be applied.*/
+/* a {
+  color: red;
+} */
+
+/* nav a:link,
+nav p {
+  font-size: 18px;
+} */
+
