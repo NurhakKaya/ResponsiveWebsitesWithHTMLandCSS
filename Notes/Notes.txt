@@ -78,9 +78,9 @@ Flex container
  align-content: stretch | flex-start | flex-end | center | space-between | space-around Only applies when there are multiple lines (flex-wrap: wrap)
  
 Flex items
-align-self: auto | stretch | flex-start | flex-end | center | baseline To overrride align-items for individual flex items.
-flex-grow: 0 To allow an element to gro (0 means no, 1+ means yes).
-flex-shrink: 1 To allow an element to shrink (0 means no, 1+ means yes).
-flex-basis: auto To define an item's width, instead of the width property. 
-flex: 0 1 auto Recommended shorthand for flex-grow, -shrink, -basis.
-order: 0 Controls order of items. -1 makes item first, 1 makes it last.
+ align-self: auto | stretch | flex-start | flex-end | center | baseline To overrride align-items for individual flex items.
+ flex-grow: 0 To allow an element to gro (0 means no, 1+ means yes).
+ flex-shrink: 1 To allow an element to shrink (0 means no, 1+ means yes).
+ flex-basis: auto To define an item's width, instead of the width property. 
+ flex: 0 1 auto Recommended shorthand for flex-grow, -shrink, -basis.
+ order: 0 Controls order of items. -1 makes item first, 1 makes it last.
